@@ -1,0 +1,26 @@
+name: Build
+
+on:
+  push:
+    branches-ignore:
+      - 'main'
+      - 'dependabot/**'
+    tags-ignore:
+      - '*'
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  call-workflow:
+    name: Centralized workflow
+    uses: flighttrackr/workflows/.github/workflows/build.yml@main
+    with:
+      hub_repo: flighttrackr
+      hub_image: fr24feed
+      image_authors: Dennis Neufeld <git@dneufeld.net>
+      image_title: fr24feed
+      image_description: Dockerized fr24feed
+      image_licenses: MIT

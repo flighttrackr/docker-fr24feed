@@ -1,0 +1,20 @@
+name: Build, Push, Release
+
+on:
+  push:
+    branches:
+      - 'main'
+    tags:
+      - 'v*'
+
+jobs:
+  call-workflow:
+    name: Centralized workflow
+    uses: flighttrackr/workflows/.github/workflows/release.yml@main
+    with:
+      hub_repo: flighttrackr
+      hub_image: fr24feed
+      image_authors: Dennis Neufeld <git@dneufeld.net>
+      image_title: fr24feed
+      image_description: Dockerized fr24feed
+      image_licenses: MIT
