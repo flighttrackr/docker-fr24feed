@@ -1,5 +1,5 @@
 # Builder
-FROM alpine:3.16.1 AS builder
+FROM alpine:3.16.2 AS builder
 
 # Workdir
 WORKDIR /app
@@ -13,7 +13,7 @@ RUN chmod +x /tmp/dl-fr24feed.sh && \
 
 
 # Release
-FROM alpine:3.16.1 AS release
+FROM alpine:3.16.2 AS release
 
 # Packages
 RUN apk add --no-cache bash sed libc6-compat libstdc++6
