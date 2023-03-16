@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 ### Changed
-- Update Alpine from 3.14 to 3.15
+- Update Alpine from 3.14 to 3.17
+- Update fr24feed to 1.0.34-0
+- Check fr24feed md5sum on image build
 
 ## [1.0.0] - 2021-11-24
 ### Changed
